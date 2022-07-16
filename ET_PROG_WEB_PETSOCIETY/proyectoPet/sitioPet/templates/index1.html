@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo De Fotos/Productos</title>
+  {% load static %}
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="{% static './editorcartita.css' %}">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+  {% load static %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow mb-5">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'img/iconopets2.jpg' %}" class="rounded"alt="60" width="60">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#" style="font-size: 30px;">Pet Society</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'index' %}" style="font-size: 18px;">Inicio</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="{% url 'somos4' %}" style="font-size: 18px;">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index1' %}" style="font-size: 18px;">Galeria De Fotos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'store' %}" style="font-size: 18px;">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'indexpruebahtmlcontacto' %}" style="font-size: 18px;">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index-imc' %}" style="font-size: 18px;">Calculadora/IMC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'registerpets' %}" style="font-size: 18px;">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+            <a href="{% url 'mostrardatos' %}" class="btn btn-success">Mostrar datos</a>
+            </li>
+            <li class="nav-item">  
+            <a href="{%  url 'logout' %}" class="btn btn-primary">Cerrar Sesión</a>
+            <a href="#">Bienvenido @{{user.username}}</a>
+            </li>
+            {% else %} 
+            <li class="nav-item"></li>
+            <a href="{% url 'login' %}" class="btn btn-primary">Iniciar Sesión</a>
+            </li>
+            {% endif %}
+          </li>
+        </ul>
+  </nav>
+  <div class="container-fluid bg-light p-2">
+    <br>    
+    <br>     
+    <div class="container">       
+      <h1 class="display-5"></h1>      
+       <p class="lead" ></p>     </div>   
+      </div>
+
+      <div class="container-fluid bg-dark p-5 border-bottom">
+        <div class="container">
+            <h1 class="text-light col-sm-12 col-md-12 col-lg-8 col-xl-8"><b>Bandanas:</b></h1>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-light p-3">
+        <br>    
+        <br>     
+        <div class="container">       
+          <h1 class="display-5"></h1>      
+           <p class="lead" ></p>     </div>   
+          </div>     
+
+      <div class="container">
+        </div>
+        <div class="container">
+          <div class="card-columns">
+            <div class="card">
+              <a href="#">
+              <img class="card-img-top" src="{% static 'img/banda1.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bandana Talla S</h5>
+                <p class="card-text">
+                  Banda Especializada En Animales De Tamaño Pequeño o Bebes, Hecha Con Materiales
+                </p>
+                
+            </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+              <img class="card-img-top" src="{% static 'img/banda2.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bandana Estilo Navidad 2.0.</h5>
+                <p class="card-text">Banda Especializada En Animales De Tamaño Grande o Extremadamente Peludos Con Estampado Navideño.</p>
+                
+              </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+              <img class="card-img-top" src="{% static 'img/banda3.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bandana Dia De Los Enamorados.</h5>
+                <p class="card-text">Bandana Con Estampado Dia De Los Enamorados, especialmente para salir con la pareja y su mascota a celebrar.</p>
+                
+              </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+              <img class="card-img-top" src="{% static 'img/banda4.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bandana Estilo Navidad.</h5>
+                <p class="card-text">Bandana con diseños Navideños especiales para navidad y poder lucirlo en sus paseos matutinos.</p>
+                
+              </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+              <img class="card-img-top" src="{% static 'img/banda5.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bandana Ajustable para Gala</h5>
+                <p class="card-text">Bandana ajustable para animales, pañuelo de cuero con estampado formal suave para animales.
+                  Aperiam, labore, molestiae!..</p>
+                
+              </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+              <img class="card-img-top" src="{% static 'img/banda6.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bandana Refrescante</h5>
+                <p class="card-text">Las bandanas refrescantes de Pawise son perfectas para refrescar a nuestras mascotas en los días calurosos y evitar los temidos y peligrosos golpes de calor.</p>
+                
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>     
+<!-- partial:index.partial -->
+
+<div class="container-fluid bg-dark p-5 border-bottom">
+  <div class="container">
+      <h1 class="text-light col-sm-12 col-md-12 col-lg-8 col-xl-8"><b>Correas:</b></h1>
+  </div>
+</div>
+
+<div class="container-fluid bg-light p-3">
+  <br>    
+  <br>     
+  <div class="container">       
+    <h1 class="display-5"></h1>      
+     <p class="lead" ></p>     </div>   
+    </div>     
+
+
+
+
+<div class="container">
+  </div>
+  <div class="container">
+    <div class="card-columns">
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/correa1.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Correa Para Bebes/Crias</h5>
+          <p class="card-text">
+            Correa Especializada Para Bebes o Crias De 3+ Meses.
+          </p>
+      </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/correa2.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Correa Para Animales Pequeños</h5>
+          <p class="card-text">Correa Especializada En Animales De Raza Pequeña o Delgados.</p>
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/correa3.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Correa Para Animales Medianos</h5>
+          <p class="card-text">Correa Especializada Para Animales En Cremiento 10+ Meses o De Tamaño Medianos.</p>
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/correa4.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Correa Para Animales Grandes</h5>
+          <p class="card-text">Correa Especializada en Animales De Gran Tamaño o en edad de adultez</p>
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/correa5.webp' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Correa O Cinturon Para Automovil</h5>
+          <p class="card-text">Correa Especializada Para Automovil o Coche Diferentes modelos y Longitudes Dependiende Del Tamaño Del Coche O El Animal </p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#">
+      <img class="card-img-top" src="{% static 'img/correa6.jpeg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Correa Retráctil Para Animales</h5>
+        <p class="card-text">Correa Extensible Para Caminar, Productos Para Mascotas De 3M/5M</p>
+      </div>
+      </a>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-dark p-5 border-bottom">
+  <div class="container">
+      <h1 class="text-light col-sm-12 col-md-12 col-lg-8 col-xl-8"><b>Identificadores:</b></h1>
+  </div>
+</div>
+
+<div class="container-fluid bg-light p-3">
+  <br>    
+  <br>     
+  <div class="container">       
+    <h1 class="display-5"></h1>      
+     <p class="lead" ></p>     </div>   
+    </div>     
+
+
+
+
+
+<div class="container">
+  </div>
+  <div class="container">
+    <div class="card-columns">
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/identi1.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Identificador Tipo Chapa Collar</h5>
+          <p class="card-text">
+            Identificador Para Animales Con Grabado Laser Su Numero,Direccion,Nombre y Un Diseño Al Gusto.
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/identi2.jpeg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Identificador Tipo Carnet/DNI</h5>
+          <p class="card-text">Carnet para Animales con código QR con el que puedes demostrar su propiedad en caso de robo, extravio, secuestro, etc.</p>
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/identi3.webp' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Identificador De Silicona Para Collar</h5>
+          <p class="card-text">Identificador de animales de silicona de acero inoxidable para mascotas, Collar de animal grabado, antipérdida, placa de identificación animales, goma extensible.</p>
+
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/identi4.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Identificador En 3D</h5>
+          <p class="card-text">Identificador Impreso en 3D Biodegradable,No toxico, Incluye Raza Del Animal,Numero De telefono del dueño y Nombre Del Animal.</p>
+        </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="{% static 'img/identi5.webp' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Identificador Con Wifi y Gps</h5>
+          <p class="card-text">Este sistema de identificación para mascotas proporciona a un smartphone con tecnología NFC la identidad de la mascota, los datos de contacto del responsable y le envía una notificación por email con su ubicación cuando alguien escanea el dispositivo con un smartphone.</p>
+      </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#">
+      <img class="card-img-top" src="{% static 'img/identi6.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Identificador Con Codigo Qr</h5>
+        <p class="card-text">Si tu mascota se pierde, aunque lleve el microchip, pueden pasar horas hasta que logren localizarte. Con QRVIDA, la persona que la encuentre dispondrá automáticamente de la información relevante que queramos introducir en la ficha.</p>
+      </div>
+      </a>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+
+<footer class="pie-pagina">
+  <div class="grupo-1">
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="{% static 'img/iconopets2.jpg' %}" width="50" alt="50"class="rounded-circle">
+        </a>
+      </figure>
+    </div>
+    <div class="box">
+      <h2>
+        SOBRE NOSOTROS:
+      </h2>
+      <p>Integrantes:</p>
+      <p>Diego Ulloa y Jarot Rivera</p>
+    </div>
+    <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="red-social">
+        <a href="#">
+          <img src="{% static 'img/png-instragram.png' %}"width="50" alt="50"class="rounded-circle">
+        </a>
+        <a href="#">
+          <img src="{% static 'img/png-face.png' %}"width="50" alt="50"class="rounded-circle">
+        </a>
+        <a href="#">
+          <img src="{% static 'img/png-email.png' %}"width="50" alt="50" class="rounded-circle">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="grupo-2">
+    <small>
+      &copy; 2022 <b>PetSociety</b> - Todos los Derechos Reservados. Compras en este sitio son 100% Seguras.</small>
+    </small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

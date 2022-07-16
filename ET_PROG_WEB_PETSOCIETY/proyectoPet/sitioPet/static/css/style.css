@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.row-content{
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.caja{
+    background-color: #0E89F5;
+    margin: auto;
+}
+#caja1{
+    height: 75px;
+}
+.pie-pagina{
+    width: 100%;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    background-color: #0a141d;
+    max-width: auto;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 70px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color:#fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color:#fff;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #FFF;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap:30px;
+        padding: 35px 10px;
+    }
+}
+.texto{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.timepage{
+        text-align:center;
+        width:200px;
+        font-size:40px;
+        border:1px solid #56aaf3;
+        padding:6px;
+        margin:12px 0 12px 0;}
